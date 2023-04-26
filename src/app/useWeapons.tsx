@@ -23,7 +23,12 @@ export interface RegulationVersion {
 
 export const regulationVersions: Record<RegulationVersionName, RegulationVersion> = {
   latest: {
-    name: "Patch 1.09.1 (latest)",
+    name: "Patch 1.09",
+    info: (
+      <>
+        Using regulation data from version 1.09 of Elden Ring. Check back soon for the latest patch.
+      </>
+    ),
     affinityOptions,
     fetch: () => fetch("/regulation-v1.09.js?3"),
   },
