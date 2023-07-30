@@ -69,7 +69,8 @@ export const WeaponTableGroupHeaderRow = styled("div", {
   minHeight: 37,
   paddingLeft: 13,
   paddingRight: 13,
-  backgroundColor: "rgba(255, 255, 255, 0.1)",
+  backgroundColor:
+    theme.palette.mode === "dark" ? "rgba(255, 255, 255, 0.1)" : "rgba(0, 0, 0, 0.08)",
   borderBottom: `solid 1px ${theme.palette.divider}`,
 }));
 
@@ -95,12 +96,14 @@ export const WeaponTableDataRow = styled("div", {
   display: "flex",
   alignItems: "stretch",
   minHeight: 36,
-  ":not(:last-of-type)": {
-    minHeight: 37,
-    borderBottom: `solid 1px ${theme.palette.divider}`,
+  ":nth-of-type(2n+1)": {
+    backgroundColor:
+      theme.palette.mode === "dark" ? "rgba(255, 255, 255, 0.05)" : "rgba(0, 0, 0, 0.04)",
   },
-  ":nth-of-type(2n+1)": { backgroundColor: "rgba(255, 255, 255, 0.02)" },
-  ":hover": { backgroundColor: "rgba(255, 255, 255, 0.08)" },
+  ":hover": {
+    backgroundColor:
+      theme.palette.mode === "dark" ? "rgba(255, 255, 255, 0.1)" : "rgba(0, 0, 0, 0.08)",
+  },
 }));
 
 /**
